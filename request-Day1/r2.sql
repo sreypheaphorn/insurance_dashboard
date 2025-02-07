@@ -5,4 +5,4 @@ SELECT e.full_name, e.gender, e.date_of_birth, c.company_name, c.contact_email, 
         ELSE 'Within Age Range'
     END AS age_group
 FROM employee e
-JOIN company c ON e.company_id = c.id;
+JOIN company c ON e.company_id = c.id;  

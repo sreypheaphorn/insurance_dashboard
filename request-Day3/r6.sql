@@ -10,6 +10,10 @@ INSERT INTO public.health_facility(
 	VALUES ( 
 	'Prek Phneou Health Center',false, '+855 12 847 675', '  National Road No 5, Prek Phnov Village, 12106 Phnom Penh ', 'N/A');
 
+select sum(premium_amount) 
+from insured_coverage cov
+join insurance_policy pol on cov.insurance_policy_id = pol.id
+join insurance_policy_premium prem on pol.id = prem.insurance_policy_id
     INSERT INTO public.health_facility(
 	health_facility_name, is_partner_hf, phone_number, location, email)
 	VALUES ( 
